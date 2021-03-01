@@ -2,23 +2,29 @@
 
 namespace w3ExArrays //{ }
 {
-    class Exercise1
+    class Exercise2
     {
         public static void Main(string[] args)
         {
-            int[] numbers = new int[10];
+            int[] num = new int[3];
+            int i;
 
-            for (int i = 0; i < numbers.Length; i++)
+            for (i = 0; i < num.Length; i++)
             {
                 Console.Write("Insert a number: ");
-                numbers[i] = int.Parse(Console.ReadLine());
+                num[i] = int.Parse(Console.ReadLine());
             }
 
-            Console.WriteLine("You inserted the following numbers");
-
-            for (int i = 0; i < numbers.Length; i++)
+            Console.WriteLine("You inserted the numbers: ");
+            for (i = 0; i < num.Length; i++)
             {
-                Console.WriteLine(numbers[i]);
+                Console.Write(num[i] + " ");
+            }
+
+            Console.WriteLine("In reverse, your numbers are: ");
+            for (i = num.Length-1; i >= 0; i--)
+            {
+                Console.Write(num[i] + " ");
             }
 
             Console.ReadLine();
