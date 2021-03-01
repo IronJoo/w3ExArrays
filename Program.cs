@@ -2,30 +2,30 @@
 
 namespace w3ExArrays //{ }
 {
-    class Exercise2
+    class Exercise3
     {
         public static void Main(string[] args)
         {
-            int[] num = new int[3];
-            int i;
+            int n, i, sum = 0;
+            Console.WriteLine("Input the number of elements to be stored in the array: ");
+            n = int.Parse(Console.ReadLine());
+            int[] array = new int[n];
 
-            for (i = 0; i < num.Length; i++)
+            Console.WriteLine($"\nInput {n} elements in the array:");
+
+            for (i = 0; i < n; i++)
             {
-                Console.Write("Insert a number: ");
-                num[i] = int.Parse(Console.ReadLine());
+                Console.Write($"Element {i}: ");
+                array[i] = int.Parse(Console.ReadLine());
             }
 
-            Console.WriteLine("You inserted the numbers: ");
-            for (i = 0; i < num.Length; i++)
+            for (i = 0; i < n; i++)
             {
-                Console.Write(num[i] + " ");
+                sum = sum + array[i];
             }
 
-            Console.WriteLine("In reverse, your numbers are: ");
-            for (i = num.Length-1; i >= 0; i--)
-            {
-                Console.Write(num[i] + " ");
-            }
+            Console.Write($"\nThe sum of all elements stored in the array is: {sum}");
+
 
             Console.ReadLine();
         }
